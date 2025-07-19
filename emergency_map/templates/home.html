@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>응급의료 정보</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body class="home-body">
+    <h1 class="home-title">🚨 응급의료 정보</h1>
+    
+    <div class="home-form-container">
+        <form action="/button_clicked" method="post">
+            <div class="home-form-group">
+                <label for="centerSelector" class="home-label">센터 선택</label>
+                <select id="centerSelector" name="center" class="home-select" onchange="handleSelectionChange()">
+                    <option value="">기관을 선택해주세요</option>
+                    {% for center in center %}
+                    <option value="{{ center }}">{{ center }}</option>
+                    {% endfor %}
+                </select>
+            </div>
+
+            <div class="home-form-group">
+                <label for="departmentSelector" class="home-label">진료과 선택</label>
+                <select id="departmentSelector" name="department" class="home-select" disabled onchange="handleSelectionChange()">
+                    <option value="">진료과를 선택해주세요</option>
+                    {% for department in departments %}
+                    <option value="{{ department }}">{{ department }}</option>
+                    {% endfor %}
+                </select>
+            </div>
+
+            <button type="submit" id="viewMapButton" class="home-button" disabled>🗺️ 지도에서 보기</button>
+        </form>
+    </div>
+
+    <script>
+        const elements = {
+            centerSelector: document.getElementById('centerSelector'),
+            departmentSelector: document.getElementById('departmentSelector'),
+            viewMapButton: document.getElementById('viewMapButton')
+        };
+
+        function handleSelectionChange() {
+            const { centerSelector, departmentSelector, viewMapButton } = elements;
+            
+            // 센터가 선택되면 진료과 선택박스 활성화
+            departmentSelector.disabled = !centerSelector.value;
+            
+            // 진료과가 선택되어야 버튼 활성화
+            viewMapButton.disabled = !departmentSelector.value;
+            
+            // 센터 변경시 진료과 초기화
+            if (!centerSelector.value) {
+                departmentSelector.value = '';
+            }
+        }
+    </script>
+</body>
+
+</html>

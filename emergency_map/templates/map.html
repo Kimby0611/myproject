@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>응급실 병상 지도</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=ae6901c4b91384d50fff40ef4f9ff671"></script>
+</head>
+<body>
+    <!-- 숨겨진 데이터 속성 -->
+    <div id="data-container" 
+         data-center-lat="{{ center_lat | safe }}" 
+         data-center-lon="{{ center_lon | safe }}"
+         data-selected-department="{{ selected_department | safe }}" 
+         style="display:none;"></div>
+
+    <!-- 진료과 선택 폼 -->
+    <form action="/button_clicked" method="post">
+        <label for="departmentSelector">진료과 선택:</label>
+        <select id="departmentSelector" name="department" onchange="searchByDepartment()">
+            <option value="">선택해주세요</option>
+            {% for department in departments %}
+                <option value="{{ department }}">{{ department }}</option>
+            {% endfor %}
+        </select>
+    </form>
+
+    <!-- 지도 -->
+    <div id="map"></div>
+
+    <!-- 범례 -->
+    <div id="legend">
+        <strong>병상 잔여율 범례</strong>
+        <div><span class="info-box green legend-text"></span> 0~40% (여유)</div>
+        <div><span class="info-box yellow legend-text"></span> 41~70% (보통)</div>
+        <div><span class="info-box orange legend-text"></span> 71~95% (혼잡)</div>
+        <div><span class="info-box red legend-text"></span> 96% 이상 (매우 혼잡)</div>
+    </div>
+
+    <!-- 내 위치 버튼 -->
+    <button id="myLocationBtn">내 위치</button>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
