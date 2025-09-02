@@ -1,0 +1,259 @@
+.calender-container {
+  height: 880px;
+  width: 570px;
+  box-sizing: border-box;
+  border-radius: 8px;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  -ms-border-radius: 8px;
+  -o-border-radius: 8px;
+}
+
+.calender-weekdays {
+  width: 530px;
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  background-color: #f1f1f1;
+  text-align: center;
+  font-weight: bold;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.weekday {
+  border: 1px solid rgba(0, 0, 0, 0.7);
+}
+
+.calender-part {
+  background-color: white;
+  padding: 10px;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  box-shadow: 5px 5px 10px;
+}
+
+.calender-days {
+  width: 530px;
+  height: 415px;
+  display: grid;
+  box-sizing: border-box;
+  grid-template-columns: repeat(7, 1fr);
+}
+
+.calender-day {
+  height: auto;
+  border: 1px solid #ddd;
+  background-color: white;
+  font-weight: bold;
+}
+
+.calender-day.active {
+  height: auto;
+  border: 1px solid rgba(45, 147, 255, 0.5);
+  background-color: rgba(45, 147, 255, 0.3);
+}
+
+.todayColor {
+  background-color: rgba(24, 255, 255, 0.3);
+}
+
+.calender-day.today {
+  height: auto;
+  border: 1px solid rgba(45, 147, 255, 0.5);
+  background-color: rgba(45, 147, 255, 0.3);
+}
+
+.day-number {
+  position: relative;
+  top: 5px;
+  left: 5px;
+  font-size: 13px;
+  color: #333;
+}
+
+.calender-day:hover {
+  background-color: rgba(52, 120, 246, 0.2);
+  cursor: pointer;
+}
+
+.calender-header {
+  width: 530px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: left;
+  gap: 10px;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.dropdown {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  border: 1px solid #ccc;
+  z-index: 10000;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  overflow-y: scroll;
+}
+
+.year {
+  top: 30px;
+  left: 185px;
+  height: 190px;
+}
+
+.month {
+  top: 30px;
+  left: 275px;
+  height: 190px;
+}
+
+.calender-title {
+  font-size: 23px;
+  line-height: 20px;
+  width: 150px;
+  text-align: center;
+  cursor: pointer;
+}
+
+.dropdown-option {
+  padding: 6px 10px;
+  cursor: pointer;
+}
+
+.dropdown-option:hover {
+  background-color: #f0f0f0;
+}
+
+.nav-btn {
+  border: none;
+  background-color: white;
+}
+
+.nav-btn:hover {
+  cursor: pointer;
+}
+
+.calender-dropdown {
+  max-height: 180px;
+}
+
+.schedule-marker {
+  width: 20px;
+  height: 20px;
+  background-color: rgba(220, 53, 69, 0.7);
+  /*빨간점*/
+  border-radius: 50%;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  -o-transform: translateX(-50%);
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  z-index: 0;
+}
+
+/* 일정 전체 영역 */
+.schedule-ui-inner {
+  width: 100%;
+  margin-top: 8px;
+  padding-left: 10px;
+  padding-right: 10px;
+  height: 370px;
+  background-color: #fdfdfd;
+  border-radius: 8px;
+  box-shadow: 5px 5px 10px;
+}
+
+.todotitle {
+  display: flex;
+  gap: 10px;
+  margin: 12px 0 10px 0;
+}
+
+/* 일정 리스트 제목 */
+.schedule-ui-inner > h3 {
+  font-size: 22px;
+  font-weight: bold;
+  color: #333;
+  line-height: 40px;
+}
+
+/* 입력 폼 */
+.time-sec {
+  display: flex;
+  gap: 13px;
+}
+
+.time-input {
+  width: 171px;
+  margin-left: 10px;
+  height: 25px;
+  text-align: center;
+  border: 1px solid rgba(0, 0, 0, 0.3);
+}
+
+.schedule-ui-inner textarea {
+  padding: 6px;
+  border: 1px solid #bbb;
+  font-size: 15px;
+  resize: none; /* 크기 조절 비활성화 */
+  width: calc(100% - 120px); /* 고정 가로 길이 */
+  height: 170px; /* 고정 세로 길이 */
+  overflow: auto; /* 내용이 넘칠 경우 스크롤 */
+  margin-top: 10px;
+  margin-left: 45px;
+}
+
+.textarea:focus {
+  outline: none;
+  border: 2px solid #3478f6;
+}
+
+.textareatitle {
+  position: relative;
+  bottom: 155px;
+  left: 33px;
+}
+
+.titleinput {
+  border: 1px solid rgba(0, 0, 0, 0.3);
+}
+
+/* 버튼 영역 */
+.schedule-ui-inner button {
+  margin-right: 8px;
+  padding: 6px 12px;
+  border: none;
+  background-color: #3478f6;
+  color: white;
+  border-radius: 4px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.schedule-btn {
+  display: flex;
+  justify-content: flex-end;
+  position: absolute;
+  right: 26px;
+  bottom: 35px;
+  gap: 8px;
+}
+
+.schedule-ui-inner button:hover {
+  background-color: #255dc0;
+}

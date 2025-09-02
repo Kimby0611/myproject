@@ -1,0 +1,441 @@
+.container {
+  display: flex;
+  height: 900px;
+  width: 1700px;
+  margin-left: 20px;
+  margin-top: 25px;
+}
+
+.searchSection {
+  width: 280px;
+  padding: 10px;
+  background: #fff;
+  box-shadow: 5px 10px 15px;
+  border-radius: 8px;
+  margin-right: 10px;
+}
+
+.sectionTitle {
+  font-size: 25px;
+  font-weight: bold;
+  color: #333;
+}
+
+.subTitle {
+  display: block;
+  font-size: 14px;
+  font-weight: 600;
+  color: #444;
+  margin-top: 10px;
+  margin-bottom: 5px;
+}
+
+.radioGroup {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 5px;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: nowrap;
+}
+
+.radioLabel {
+  margin-right: 10px;
+}
+
+.left_select {
+  font-size: 12px;
+  background-color: #fafafa;
+  border: 1px solid #666;
+  border-radius: 4px;
+  width: 180px;
+  height: 30px;
+  margin-bottom: 5px;
+}
+
+.left_input {
+  font-size: 12px;
+  background-color: #fafafa;
+  border: 1px solid #666;
+  border-radius: 4px;
+  width: 180px;
+  height: 30px;
+  margin-bottom: 5px;
+}
+
+.filter_div {
+  display: flex;
+  align-items: center;
+  margin-bottom: 5px;
+}
+
+.year_sel {
+  font-size: 12px;
+  background-color: #fafafa;
+  border: 1px solid #666;
+  border-radius: 4px;
+  width: 90px;
+  height: 30px;
+  margin-right: 2px;
+}
+
+.mon_day_sel {
+  font-size: 12px;
+  background-color: #fafafa;
+  border: 1px solid #666;
+  border-radius: 4px;
+  width: 60px;
+  height: 30px;
+  margin-right: 2px;
+}
+
+.dateLabel {
+  font-size: 15px;
+  margin-left: 5px;
+  align-self: center;
+}
+
+.queryButton {
+  display: block;
+  width: 195px;
+  padding: 8px;
+  font-size: 14px;
+  background-color: #2d93ff;
+  color: #fff;
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.dataSection {
+  flex: 1;
+  padding: 10px;
+  background: #fff;
+  box-shadow: 10px 10px 15px;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.headerContainer {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 15px;
+}
+.assetTitle {
+  width: 100%;
+}
+
+.actionButtonContainer {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  align-items: center;
+  margin-top: 5px;
+  margin-right: 50px;
+}
+
+.addButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100px;
+  height: 40px;
+  padding: 8px;
+  font-size: 16px;
+  background-color: #2d93ff;
+  color: #fff;
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.plusIcon {
+  font-size: 20px;
+  margin-right: 5px;
+}
+
+.disposeButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100px;
+  height: 40px;
+  padding: 8px;
+  font-size: 16px;
+  background-color: #dc3545;
+  color: #fff;
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.disposeButton.active {
+  background-color: #666;
+}
+
+.disposeSection {
+  display: flex;
+  flex-direction: column;
+  height: calc(100% - 60px);
+  gap: 10px;
+}
+
+.disposeUpperSection {
+  flex: 1;
+  overflow: hidden;
+}
+
+.sectionHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px 0;
+}
+
+.section_header_span {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.section_header_btn {
+  display: flex;
+  gap: 10px;
+}
+
+.selectAllButton,
+.moveButton,
+.disposeConfirmButton {
+  display: flex;
+  align-items: center;
+  padding: 5px 10px;
+  font-size: 14px;
+  color: #fff;
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.selectAllButton {
+  background-color: #1976d2;
+}
+
+.moveButton {
+  background-color: #388e3c;
+}
+
+.disposeConfirmButton {
+  background-color: #d32f2f;
+}
+
+.sortIcon {
+  margin-left: 5px;
+  font-size: 12px;
+}
+
+.noDataWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  min-height: 200px;
+  height: 200px;
+}
+.noDataMessage {
+  text-align: center;
+  font-size: 30px;
+  color: #000;
+  padding: 20px;
+  margin-top: 50px;
+}
+
+.disposeLowerSection {
+  flex: 1;
+  overflow: hidden;
+}
+
+.icon {
+  font-size: 20px;
+  margin-right: 5px;
+}
+
+.cancelButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 120px;
+  height: 45px;
+  padding: 10px;
+  font-size: 16px;
+  font-weight: bold;
+  background-color: #666;
+  color: #fff;
+  border-radius: 4px;
+  border: 1px solid #555;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.modalTitle {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 24px;
+  border-bottom: 2px solid #666;
+  background-color: #e8e8e8;
+}
+
+.modalTitleText {
+  font-size: 28px;
+  font-weight: bold;
+  color: #1a1a1a;
+  padding-bottom: 5px;
+}
+.modalContent {
+  padding: 20px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  background-color: #f5f5f5;
+}
+.modalFormField {
+  margin-bottom: 5px;
+  width: 180px;
+}
+.modalActions {
+  padding: 20px 24px;
+  display: flex;
+  justify-content: flex-start;
+  gap: 15px;
+  border-top: 1px solid #666;
+  background-color: #e8e8e8;
+}
+.closeButton {
+  color: #000000;
+}
+.errorMessage {
+  color: red;
+  font-size: 14px;
+  margin-top: 10px;
+  text-align: center;
+}
+.tableContainer {
+  margin-top: 10px;
+  box-shadow: none;
+  height: 100%;
+}
+.table-container-auto {
+  overflow-y: auto;
+}
+
+.table-container-hidden {
+  overflow-y: hidden;
+}
+/* 테이블 셀 스타일 추가 */
+.table {
+  table-layout: fixed;
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.table-header {
+  background-color: #444;
+  color: #fff;
+  font-weight: bold;
+  font-size: 14px;
+  padding: 8px;
+  text-align: center;
+  border-bottom: 1px solid #ddd;
+  border-right: 1px solid #ddd;
+  cursor: pointer;
+  height: 40px;
+  background-color: #2d93ff;
+}
+
+.table-header-last {
+  border-right: none;
+}
+
+.table-row {
+  height: 40px; /* 행 높이 고정 */
+}
+
+.table-cell {
+  font-size: 14px;
+  padding: 4px;
+  border-bottom: none;
+  border-right: 1px solid #ddd;
+  text-align: center; /* 가운데 정렬 */
+  box-sizing: border-box;
+  vertical-align: middle;
+  line-height: normal;
+  height: 40px;
+}
+
+.table-cell-last {
+  border-right: none;
+}
+
+.table-cell-select {
+  width: 50px; /* 선택 열 너비 */
+}
+
+.status-cell-use {
+  color: blue; /* 사용: 파란색 */
+}
+
+.status-cell-dispose {
+  color: red; /* 폐기: 빨간색 */
+}
+
+.status-cell-default {
+  color: black; /* 기타: 검정색 */
+}
+
+.selected-row {
+  background-color: #e0f7fa; /* 선택된 행 배경 */
+}
+
+.no-data-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  min-height: 200px;
+  height: 200px;
+}
+
+.no-data-message {
+  text-align: center;
+  font-size: 30px;
+  color: #000;
+  padding: 20px;
+}
+.save-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 120px;
+  height: 45px;
+  padding: 10px;
+  font-size: 16px;
+  font-weight: bold;
+  background-color: #003087;
+  color: #fff;
+  border-radius: 4px;
+  border: 1px solid #002060;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.save-button-disabled {
+  opacity: 0.5;
+  pointer-events: none;
+}

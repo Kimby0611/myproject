@@ -82,6 +82,7 @@ public class WidgetController {
 
     /**
      * 인증성공처리
+     * 
      * @param request
      * @param model
      * @return
@@ -92,13 +93,14 @@ public class WidgetController {
         return "/success";
     }
 
-    @RequestMapping(value = "/", method = RequestMethod.GET)
+    @RequestMapping(value = "/payment", method = RequestMethod.GET)
     public String index(HttpServletRequest request, Model model) throws Exception {
         return "/checkout";
     }
 
     /**
      * 인증실패처리
+     * 
      * @param request
      * @param model
      * @return

@@ -1,0 +1,136 @@
+/* Login.css */
+.popup_background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.popup_container {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  width: 300px;
+  height: 300px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.popup_logo {
+  width: 100%;
+  height: 20px;
+  color: black;
+  flex: 1;
+  font-weight: bold;
+  font-size: 30px;
+  position: relative;
+  left: 15px;
+  top: 20px;
+}
+
+.idinput {
+  width: 100%;
+  height: 25px;
+  color: black;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.pwinput {
+  width: 100%;
+  height: 25px;
+  color: black;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+
+.popup_btn {
+  margin-top: 10px;
+  height: 70px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.error_message {
+  min-height: 20px; /* 오류 메시지 영역 최소 높이 확보 */
+  display: flex;
+  align-items: center; /* 메시지가 있을 때 세로 중앙 정렬 */
+  font-weight: bold;
+}
+
+.closeimg {
+  width: 27px;
+  height: 27px;
+  display: block;
+  object-fit: cover;
+}
+
+.closebtn_login {
+  width: 23px;
+  height: 23px;
+  cursor: pointer;
+  position: relative;
+  top: -5px;
+  right: -4px;
+  border: none;
+  background: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+}
+
+.closebtn_login:hover {
+  box-shadow: 1px 1px 10px;
+}
+
+.popup_head {
+  display: flex;
+  margin-bottom: 70px;
+}
+.login_regi_btn {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  gap: 5px;
+}
+
+.login_btn {
+  height: 30px;
+  flex: 1;
+  border-radius: 5px;
+  background-color: #2d93ff;
+  border: none;
+  cursor: pointer;
+  color: white;
+  font-weight: bold;
+}
+.regi_btn {
+  height: 30px;
+  flex: 1;
+  border-radius: 5px;
+  background-color: #2d93ff;
+  border: none;
+  cursor: pointer;
+  color: white;
+  font-weight: bold;
+}
+
+.login_btn:hover,
+.regi_btn:hover {
+  background-color: #005eb8;
+  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
+  color: white;
+  transition: background-color 0.3s ease;
+}

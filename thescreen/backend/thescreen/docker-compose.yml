@@ -1,0 +1,59 @@
+version: '3.8'
+services:
+  mariadb:
+    image: mariadb:latest
+    environment:
+      MYSQL_ROOT_PASSWORD: rootpassword
+      MYSQL_DATABASE: thescreen
+      MYSQL_USER: ${DB_USERNAME}
+      MYSQL_PASSWORD: ${DB_PASSWORD}
+    ports:
+      - "3306:3306"
+    volumes:
+      - mariadb-data:/var/lib/mysql
+    networks:
+      - app-network
+
+  redis:
+    image: redis:latest
+    ports:
+      - "6379:6379"
+    networks:
+      - app-network
+
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    environment:
+      - DB_USERNAME=${DB_USERNAME}
+      - DB_PASSWORD=${DB_PASSWORD}
+      - SPRING_DATASOURCE_URL=jdbc:mariadb://mariadb:3306/thescreen?allowMultiQueries=true
+      - SPRING_REDIS_HOST=redis
+      - SPRING_REDIS_PORT=6379
+      - NAVER_CLIENT_ID=${NAVER_CLIENT_ID}
+      - NAVER_CLIENT_SECRET=${NAVER_CLIENT_SECRET}
+      - NAVER_REDIRECT_URL=${NAVER_REDIRECT_URL}
+      - KAKAO_CLIENT_ID=${KAKAO_CLIENT_ID}
+      - KAKAO_CLIENT_SECRET=${KAKAO_CLIENT_SECRET}
+      - KAKAO_REDIRECT_URI=${KAKAO_REDIRECT_URI}
+      - GOOGLE_CLIENT_ID=${GOOGLE_CLIENT_ID}
+      - OPENAI_API_KEY=${OPENAI_API_KEY}
+      - COOLSMS_API_KEY=${COOLSMS_API_KEY}
+      - COOLSMS_SECRET_KEY=${COOLSMS_SECRET_KEY}
+      - KOBIS_API_KEY=${KOBIS_API_KEY}
+      - KMDB_API_KEY=${KMDB_API_KEY}
+    ports:
+      - "8080:8080"
+    depends_on:
+      - mariadb
+      - redis
+    networks:
+      - app-network
+
+volumes:
+  mariadb-data:
+
+networks:
+  app-network:
+    driver: bridge

@@ -1,0 +1,31 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+.main-content {
+  margin-top: 25px;
+  margin-left: 20px;
+  width: 1700px;
+  height: 900px;
+  display: flex;
+}
+
+.slide-section {
+  margin-bottom: 10px;
+  position: relative;
+  height: 500px;
+  display: flex;
+  flex-direction: column;
+}
+
+.info-section {
+  width: 100%;
+  margin-left: 10px;
+  display: flex;
+  gap: 20px;
+  position: relative;
+}
+
+.info-box {
+  flex: 1;
+}

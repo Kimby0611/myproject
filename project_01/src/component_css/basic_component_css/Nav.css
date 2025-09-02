@@ -1,0 +1,180 @@
+.navWrap {
+  min-width: 180px;
+  width: 180px;
+  height: 100vh; /* 헤더 높이(60px)를 뺀 높이 */
+  background-color: #007bff;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  padding-top: 16px;
+  top: 60px; /* 헤더 높이만큼 아래로 이동 */
+  left: 0;
+  border-radius: 0 20px 20px 0;
+  box-shadow: 5px 3px 15px black;
+}
+
+.navItem {
+  display: flex;
+  align-items: center;
+  padding: 15px 16px;
+  cursor: pointer;
+}
+
+.navItem:hover {
+  background-color: #004a91;
+}
+
+.navIcon {
+  width: 24px;
+  height: 24px;
+  margin-right: 20px;
+}
+
+.navItem span {
+  font-size: 16px;
+}
+
+.logo {
+  height: 60px;
+  margin-left: 20px;
+  padding-top: 17px;
+  cursor: pointer;
+}
+* {
+  padding: 0;
+  margin: 0;
+}
+
+.auth-buttons {
+  background-color: #007bff;
+  width: 160px;
+  height: 100px;
+  margin-left: 10px;
+  margin-bottom: 15px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: auto;
+  transition: border-color 0.2s ease;
+}
+
+.NavloginButton:hover {
+  background-color: #005cbf;
+  border-color: #005cbf;
+  background-color: #005cbf;
+  box-shadow: inset 2px 2px 5px rgba(0, 0, 0, 0.4),
+    inset -2px -2px 5px rgba(0, 0, 0, 0.4);
+}
+
+.NavloginButton {
+  background-color: transparent;
+  border: none;
+  width: 100%;
+  height: 100px;
+  color: white;
+  border-radius: 6px;
+  font-size: 20px;
+  font-weight: 500;
+  cursor: pointer;
+  box-shadow: -5px 5px 2px #023f80, 1px -1px 2px #023f80;
+  transition: background-color 0.2s ease, color 0.2s ease;
+  -webkit-transition: background-color 0.2s ease, color 0.2s ease;
+  -moz-transition: background-color 0.2s ease, color 0.2s ease;
+  -ms-transition: background-color 0.2s ease, color 0.2s ease;
+  -o-transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.NavloginButton:active {
+  background-color: rgb(41, 151, 255);
+}
+
+.user-info {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 120px;
+  border-radius: 5px;
+  box-shadow: -5px 5px 7px #023f80, 1px -1px 7px #023f80;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+}
+.user-role {
+  font-size: 12px;
+  font-weight: 400;
+  color: #f0f0f0;
+  margin-left: 10px;
+  margin-top: 5px;
+}
+
+.userNameDiv {
+  height: 65px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.navUsername {
+  text-align: center;
+  font-size: 20px;
+  font-weight: 600;
+  margin: 6px 0;
+}
+.myname {
+  background-color: #007bff;
+  text-decoration: none;
+  color: white;
+  font-size: 18px;
+}
+.myname:hover {
+  cursor: pointer;
+}
+
+.myRank {
+  font-size: 12px;
+  font-weight: 400;
+  color: #f0f0f0;
+}
+
+.logoutDiv {
+  width: 100%;
+  text-align: center;
+}
+
+.logout {
+  background-color: transparent;
+  color: white;
+  padding: 4px 12px;
+  width: 110px;
+  border-radius: 70px;
+  font-size: 11px;
+  font-weight: 500;
+  border: none;
+  border-right: 1px solid black;
+  box-shadow: inset 2px 1px 10px #0400ff;
+  cursor: pointer;
+  transition: background-color 0.2s ease, color 0.2s ease;
+  -webkit-transition: background-color 0.2s ease, color 0.2s ease;
+  -moz-transition: background-color 0.2s ease, color 0.2s ease;
+  -ms-transition: background-color 0.2s ease, color 0.2s ease;
+  -o-transition: background-color 0.2s ease, color 0.2s ease;
+  -webkit-border-radius: 70px;
+  -moz-border-radius: 70px;
+  -ms-border-radius: 70px;
+  -o-border-radius: 70px;
+}
+
+.logout img {
+  width: 20px;
+  height: 20px;
+  vertical-align: middle;
+  color: black;
+  margin-left: 5px;
+}
+
+.logout:hover {
+  background-color: #005cbf;
+  border-color: #005cbf;
+}

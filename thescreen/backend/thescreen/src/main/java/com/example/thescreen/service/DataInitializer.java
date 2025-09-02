@@ -22,7 +22,7 @@ public class DataInitializer {
             user.setUserpw(passwordEncoder.encode(plainPassword)); // BCrypt로 해시화
             user.setUsername("테스트" + i + "번");
             user.setEmail("user" + i + "@example.com");
-            user.setPhone(String.format("010-%04d-%04d",
+            user.setPhone(String.format("010%04d%04d",
                     (int)(Math.random() * 9000) + 1000,
                     (int)(Math.random() * 9000) + 1000));
             user.setBirth(LocalDate.of(1980, 1, 1).plusDays((int)(Math.random() * 9000)));

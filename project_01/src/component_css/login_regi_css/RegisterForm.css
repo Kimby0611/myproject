@@ -1,0 +1,102 @@
+/* 회원가입 입력 틀 CSS */
+.regiWrap {
+  width: 500px;
+  height: 800px;
+  border: 1px solid #ccc;
+  margin: 60px auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+}
+/* 회원가입 틀 헤더 CSS */
+.regiTitle {
+  height: 60px;
+  display: flex;
+  align-items: center;
+  margin-left: 30px;
+}
+/* 회원가입 폼 틀 CSS */
+.regiInputs {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  margin: 0 70px;
+  padding: 20px 0;
+}
+/* 회원가입 label+input박스 들어있는 div CSS */
+.inputGroup {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 15px;
+  align-items: flex-start;
+}
+.inputGroup label {
+  display: flex;
+  width: 30%;
+  margin-bottom: 5px;
+  font-size: 16px;
+  color: #555;
+}
+
+.inputGroup input {
+  padding: 10px;
+  width: 100%;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  outline: none;
+  transition: border-color 0.2s;
+  -webkit-transition: border-color 0.2s;
+  -moz-transition: border-color 0.2s;
+  -ms-transition: border-color 0.2s;
+  -o-transition: border-color 0.2s;
+}
+
+.inputGroup input:focus {
+  border-color: #007bff;
+}
+/* input박스 개별 CSS */
+.rrnInput {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+/* 버튼 CSS */
+.regiBtn {
+  display: flex;
+  justify-content: space-around;
+}
+
+.regiBtn > button {
+  padding: 10px 20px;
+  width: 150px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  margin-top: 20px;
+  transition: background-color 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 40px;
+  -webkit-transition: background-color 0.2s;
+  -moz-transition: background-color 0.2s;
+  -ms-transition: background-color 0.2s;
+  -o-transition: background-color 0.2s;
+}
+
+.regiBtn > button:hover {
+  background-color: #0056b3;
+}
+
+/* 에러 메세지 CSS */
+.confirmError {
+  display: flex;
+  width: 100%;
+}

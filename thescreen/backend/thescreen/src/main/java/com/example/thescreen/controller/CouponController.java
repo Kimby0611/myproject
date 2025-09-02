@@ -38,7 +38,7 @@ public class CouponController {
     /**
      * 사용자별 사용 가능한 쿠폰 목록 조회
      */
-    @GetMapping("/users/{userid}/coupons/available")
+    @GetMapping("/api/users/{userid}/coupons/available")
     public ResponseEntity<?> getAvailableCoupons(@PathVariable String userid) {
         try {
             List<Coupon> coupons = couponService.getAvailableCoupons(userid);

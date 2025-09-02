@@ -1,0 +1,13 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.wrap {
+  display: flex;
+  background-color: rgba(0, 0, 0, 0.1);
+}
+.outlet {
+  width: 800px;
+  flex: 1;
+}
